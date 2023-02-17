@@ -1,10 +1,25 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+
+<navbarComp/>
+<div>
   <router-view/>
+</div>
+<footerComp/>
+
 </template>
+
+<script>
+import navbarComp from './components/navbarComp.vue'
+import footerComp from './components/footerComp.vue'
+
+export default{
+  components:{
+    navbarComp,
+    footerComp
+  }
+}
+</script>
+
 
 <style>
 #app {
@@ -28,3 +43,6 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+
+
+
